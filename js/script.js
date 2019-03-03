@@ -1,12 +1,13 @@
 import "./targetblank"; // pro otvírání odkazů v novém okně
 
-mapboxgl.accessToken = 'pk.eyJ1IjoidG9jaXQiLCJhIjoiY2phZTB2eXAyMWxtdzJ5anV2d3JiazJiOSJ9.Z0RwPmdQt1eAknKXSlK6tQ';
+mapboxgl.accessToken = 'pk.eyJ1IjoidG9jaXQiLCJhIjoiY2pzczY0bWh5MWJ3cDN6bzZieGl6ZzB1eSJ9.QuIC52CEfSwa5JI8yNVCtw';
 
 
 var map = new mapboxgl.Map({
     container: 'map',
     style: 'mapbox://styles/tocit/cjsqj6l569udg1fs4qh15mlzj',
-    center: [15.4730, 49.8175]
+    center: [15.4730, 49.8175],
+    zoom: 6
 });    
 
 
@@ -14,7 +15,7 @@ map.on('load', function() {
     //legenda
     var i;
     var colors = ['#d7191c', '#fdae61', '#ffffbf', '#a6d96a', '#1a9641'];
-    var layers = ['< 80 %', '80-85 %', '85-90 %', '90-95 %', '> 95 %'];
+    var layers = ['< 80 % (4 STK)', '80-85 % (24 STK)', '85-90 % (60 STK)', '90-95 % (158 STK)', '> 95 % (73 STK)'];
 
     for (i = 0; i < layers.length; i++) {
         var layer = layers[i];
